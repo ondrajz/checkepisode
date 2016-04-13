@@ -1,0 +1,33 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"path": "github.com/gorilla/context",
+			"revision": "1c83b3eabd45b6d76072b66b746c20815fb2872d",
+			"revisionTime": "2015-08-19T22:12:45-07:00"
+		},
+		{
+			"path": "github.com/gorilla/mux",
+			"revision": "26a6070f849969ba72b72256e9f14cf519751690",
+			"revisionTime": "2015-12-31T08:19:08-08:00"
+		},
+		{
+			"path": "github.com/mattn/go-sqlite3",
+			"revision": "37aa7c6f5bc95b7264de70cd1f0ca1d39228ebd6",
+			"revisionTime": "2016-03-25T01:18:33+09:00"
+		},
+		{
+			"checksumSHA1": "hBgLmZ/4mCxmnH88mqFKBkpJFUY=",
+			"path": "github.com/mgutz/ansi",
+			"revision": "c286dcecd19ff979eeb73ea444e479b903f2cfcb",
+			"revisionTime": "2015-09-14T09:22:38-07:00"
+		},
+		{
+			"path": "github.com/mgutz/ansi",
+			"revision": "c286dcecd19ff979eeb73ea444e479b903f2cfcb",
+			"revisionTime": "2015-09-14T09:22:38-07:00"
+		}
+	],
+	"rootPath": "checkepisode"
+}

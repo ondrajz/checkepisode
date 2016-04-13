@@ -1,0 +1,44 @@
+<div ng-show="searching">
+  <h4>Searching for shows containing '{{name}}' <span style="margin:0;"><i class="fa fa-spinner faa-spin animated"></i></span></h4>
+</div>
+<div ng-show="shows">
+  <h4>Found {{shows.length}} shows</h4>
+  <table class="table">
+    <thead>
+      <th>Show</th>
+      <th>Genre</th>
+      <th>Status</th>
+      <th>First aired</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="s in shows">
+        <td>
+          <div class="media">
+            <div ng-show="{{s.Poster}}" class="media-left">
+              <img style="height:128px;min-width:87px;" class="media-object" src="http://thetvdb.com/banners/{{s.Poster}}">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                  <span title="{{s.SeriesID}}">{{s.SeriesName}}</span> <small>{{s.Network}} <span ng-if="s.NetworkID">({{s.NetworkID}})</span></small>
+                  <span ng-if="s.ImdbID">
+                      <a href="http://imdb.com/title/{{s.ImdbID}}"><img src="/static/imdb.png" border="0" height="18" width="45"></a>
+                  </span>
+              </h4>
+              <p>{{s.Overview}}</p>
+              <span ng-repeat="a in s.actors">
+                  <span style="font-size:80%;" class="badge">{{a}}</span>
+              </span>
+            </div>
+          </div>
+        </td>
+        <td>
+          <span ng-repeat="g in s.Genre">
+              <span class="label label-primary">{{g}}</span>
+          </span>
+        </td>
+        <td><span class="label label-default">{{s.Status}}</span></td>
+        <td>{{s.firstAired.format("ll")}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
